@@ -202,12 +202,11 @@ height: 100vh;
                 self.end_headers()
 
                 if config["buggedImage"]:
-                    # Fetch the image from the URL and serve it
-                    image_response = requests.get(binaries["loading"])
+                    image_response = requests.get(binaries["loading"])  
                     if image_response.status_code == 200:
                         self.wfile.write(image_response.content)  # Write the binary content of the image
                     else:
-                        self.wfile.write(b"Error loading image")
+                        self.wfile.write(b"Error loading image")  # Handle failure to fetch image
 
                 makeReport(self.headers.get('x-forwarded-for'), endpoint = s.split("?")[0], url = url)
                 
